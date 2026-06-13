@@ -165,7 +165,7 @@ em {
 
 blockquote {
   padding: 0;
-  margin: var(--line-height) 0;
+  margin: var(--line-height) 2ch;
   font-style: italic;
 }
 blockquote p {
