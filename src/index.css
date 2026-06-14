@@ -77,7 +77,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-normal);
-  margin: var(--line-height) 0;
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
   line-height: var(--line-height);
 }
 
@@ -99,7 +99,6 @@ body > h1, h2#toc-title {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding: calc(var(--line-height)) 0;
-  margin: var(--line-height) 0;
   border-bottom: var(--border-thickness) solid var(--text-color);
   background: var(--background-color);
 }
@@ -118,6 +117,7 @@ h2 {
 
 h3 {
   font-style: italic;
+  margin: var(--line-height) 0;
 }
 
 h4 {
@@ -225,7 +225,8 @@ sub {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 0 calc(var(--line-height) * 2);
+  /* compensate for cell padding: */
+  margin: calc(var(--line-height) * -0.5) 0 calc(var(--line-height) * 1.5);
   padding: 0;
 }
 
