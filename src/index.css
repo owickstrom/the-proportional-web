@@ -81,6 +81,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height);
 }
 
+.header-section-number {
+  font-family: 'Alegreya', serif;
+  font-size: .875rem;
+  font-weight: var(--font-weight-normal);
+  font-variant: initial;
+  letter-spacing: 0;
+  margin-right: .5ch;
+  font-style: normal;
+}
+
 body > h1, h2#toc-title {
   font-family: 'Alegreya SC', serif;
   font-variant: titling-caps;
@@ -94,28 +104,20 @@ body > h1, h2#toc-title {
   background: var(--background-color);
 }
 
+h1 .header-section-number {
+  display: none;
+}
+
 h2 {
   font-family: 'Alegreya SC', serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-variant: all-small-caps;
-  font-weight: 500;
+  font-weight: 450;
   letter-spacing: 0.125em;
 }
 
 h3 {
   font-style: italic;
-}
-
-.header-section-number {
-  font-size: .875rem;
-  font-weight: var(--font-weight-normal);
-  font-variant: initial;
-  letter-spacing: 0;
-  margin-right: .5ch;
-  font-style: normal;
-}
-h1 .header-section-number {
-  display: none;
 }
 
 h4 {
@@ -185,6 +187,12 @@ strong {
 em {
   font-style: italic;
 }
+abbr {
+  font-size: 1.125rem;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
 
 blockquote {
   padding: 0;
@@ -218,32 +226,24 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 0 0 calc(var(--line-height) * 2);
+  padding: 0;
 }
 
 th, td {
-  /* border: var(--border-thickness) solid var(--text-color); */
-  padding: 
-    calc((var(--line-height) / 2))
-    calc(1ch - var(--border-thickness) / 2)
-    calc((var(--line-height) / 2) - (var(--border-thickness)))
-  ;
+  padding: calc(var(--line-height) / 2) .5ch;
   line-height: var(--line-height);
   vertical-align: top;
   text-align: left;
 }
-table tbody tr:first-child > * {
-  padding-top: calc((var(--line-height) / 2) - var(--border-thickness));
-}
-
 
 th {
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
-.width-min {
-  width: 0%;
-}
-.width-auto {
-  width: 100%;
+thead tr:last-child th {
+  border-bottom: var(--border-thickness) solid var(--text-color);
 }
 
 header {
@@ -359,8 +359,8 @@ ul {
   padding: 0;
 }
 ul li:before {
-  content: "• ";
-  font-weight: var(--font-weight-bold);
+  content: "•";
+  margin-right: 1ch;
 }
 
 ol {
@@ -376,9 +376,9 @@ ul ul {
   margin: 0;
 }
 ol li:before { 
+  font-size: .875rem;
   content: counters(item, ".") ". ";
   counter-increment: item;
-  font-weight: var(--font-weight-medium);
 }
 
 li {

@@ -9,6 +9,8 @@ toc-title: Contents
 
 # Foreword {.unnumbered}
 
+Legio <abbr>SQPR</abbr> castra ponebat trans flumen, ubi aquila aurea in vento stabat.
+
 Lorem ipsum dolor sit amet, consectetur *adipiscing elit*. Sed vitae tortor ut
 arcu facilisis fermentum quis eget sem. Fusce pharetra velit nec nisi lacinia,
 vel dapibus nulla fermentum. Sed vitae metus fringilla, sodales ipsum nec,
@@ -197,20 +199,14 @@ Ordered lists look pretty much as you'd expect:
     1. Extrinsic
 1. Second-order effects
 
-It's nice to visualize trees.
-This is a regular unordered list with a `tree` class:
-
 ## Tables
-
-We can use regular tables that automatically adjust to the monospace grid.
-They're responsive. 
 
 <table>
 <thead>
   <tr>
-    <th class="width-min">Name</th>
-    <th class="width-auto">Dimensions</th>
-    <th class="width-min">Position</th>
+    <th>Name</th>
+    <th>Dimensions</th>
+    <th>Position</th>
   </tr>
 </thead>
 <tbody>
@@ -226,31 +222,4 @@ They're responsive.
   </tr>
 </tbody>
 </table>
-
-Note that only one column is allowed to grow.
-
-## Forms
-
-Here are some buttons:
-
-<nav>
-    <button>Reset</button>
-    <button>Save</button>
-</nav>
-
-And inputs:
-
-<form class="grid">
-<label>First name <input type="text" placeholder="Placeholder..." /></label>
-<label>Last name <input type="text" placeholder="Text goes here..." /></label>
-<label>Age <input type="text" value="30" /></label>
-</form>
-
-And radio buttons:
-
-<form class="grid">
-<label><input name="radio" type="radio" /> Option #1</label>
-<label><input name="radio" type="radio" /> Option #2</label>
-<label><input name="radio" type="radio" /> Option #3</label>
-</form>
 
