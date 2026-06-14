@@ -6,6 +6,7 @@
 
 :root {
   --font-family: "Alegreya", serif;
+  --font-family-code: "Courier Prime", monospace;
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
   --text-color: #000;
@@ -81,8 +82,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body > h1, h2#toc-title {
+  font-family: 'Alegreya SC', serif;
+  font-variant: titling-caps;
   font-size: 1.25rem;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding: calc(var(--line-height)) 0;
@@ -92,9 +95,10 @@ body > h1, h2#toc-title {
 }
 
 h2 {
-  font-size: 0.875rem;
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125rem;
+  font-variant: all-small-caps;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 0.125em;
 }
 
@@ -105,6 +109,7 @@ h3 {
 .header-section-number {
   font-size: .875rem;
   font-weight: var(--font-weight-normal);
+  font-variant: initial;
   letter-spacing: 0;
   margin-right: .5ch;
   font-style: normal;
@@ -125,15 +130,27 @@ hr {
   border: none;
   color: var(--text-color);
 }
-hr:after {
+
+hr:before {
   display: block;
   content: "";
   position: absolute;
-  top: calc(var(--line-height) / 2 - var(--border-thickness));
+  top: calc(var(--line-height) / 2);
   left: 0;
   width: 100%;
-  border-top: calc(var(--border-thickness) * 3) double var(--text-color);
+  border-top: var(--border-thickness) solid var(--text-color);
   height: 0;
+}
+hr:after {
+  display: inline-block;
+  content: "❧";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1ch);
+  width: 2ch;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--background-color);
 }
 
 a {
@@ -145,16 +162,20 @@ a:link, a:visited {
 }
 
 p {
-  margin: 0;
+  margin-top: var(--line-height);
   text-align: justify;
   word-break: break-all;
+}
+p + p {
+  margin-top: 0;
   text-indent: 2ch;
 }
 
 h1 + p,
 h2 + p,
 h3 + p,
-h4 + p {
+h4 + p,
+hr + p {
   text-indent: 0;
 }
 
@@ -264,13 +285,15 @@ img {
 }
 
 details {
-  border: var(--border-thickness) solid var(--text-color);
-  padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
-  margin-bottom: var(--line-height);
+  margin: var(--line-height) 0;
+  border-top: var(--border-thickness) solid var(--text-color);
+  border-bottom: var(--border-thickness) solid var(--text-color);
+  padding: var(--line-height) 0;
 }
 
 summary {
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
   cursor: pointer;
 }
 details[open] summary {
@@ -278,12 +301,16 @@ details[open] summary {
 }
 
 details ::marker {
-  display: inline-block;
-  content: '▶';
-  margin: 0;
+  content: '';
 }
-details[open] ::marker {
-  content: '▼';
+
+details summary::before {
+  display: inline-block;
+  content: '»';
+  margin: 0 .5ch 0 0;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 details :last-child {
@@ -301,11 +328,12 @@ figure pre {
 }
 
 pre, code {
-  font-family: var(--font-family);
+  font-family: var(--font-family-code);
 }
 
-p code, figcaption code {
-  font-weight: var(--font-weight-medium);
+code {
+  font-weight: 450;
+  font-size: .95em;
 }
 
 figure {
@@ -327,9 +355,14 @@ ul, ol {
 }
 
 ul {
-  list-style-type: square;
-  padding: 0 0 0 2ch;
+  list-style-type: none;
+  padding: 0;
 }
+ul li:before {
+  content: "• ";
+  font-weight: var(--font-weight-bold);
+}
+
 ol {
   list-style-type: none;
   counter-reset: item;
@@ -339,7 +372,7 @@ ol ul,
 ol ol,
 ul ol,
 ul ul {
-  padding: 0 0 0 3ch;
+  padding: 0 0 0 2ch;
   margin: 0;
 }
 ol li:before { 

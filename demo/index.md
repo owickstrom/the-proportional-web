@@ -169,9 +169,7 @@ mattis nisl eget metus imperdiet rhoncus.
 # Elements
 
 This document uses a few extra classes here and there, but mostly it's just markup.
-This, for instance, is a regular paragraph.
-
-Look at this horizontal break:
+This, for instance, is a regular paragraph. Look at this horizontal break:
 
 <hr>
 
@@ -201,29 +199,6 @@ Ordered lists look pretty much as you'd expect:
 
 It's nice to visualize trees.
 This is a regular unordered list with a `tree` class:
-
-<ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
-
-* usr                               
-    * local                         
-    * share                         
-    * libexec                       
-    * include                       
-    * sbin                          
-    * src                           
-    * lib64                         
-    * lib                           
-    * bin                           
-    * games                         
-        * solitaire
-        * snake
-        * tic-tac-toe
-    * media                         
-* media                             
-* run                               
-* tmp                               
-
-</li></ul>
 
 ## Tables
 
