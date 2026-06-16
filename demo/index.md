@@ -1,6 +1,6 @@
 ---
-title: Elements of Web Typography
-subtitle: A portable <abbr>CSS</abbr> adaptation of Bringhurst's system
+title: bringhurst.css
+subtitle: A web adaptation of *The Elements of Typographical Style*
 author: Oskar Wickström
 author-url: "https://wickstrom.tech"
 lang: en

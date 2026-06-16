@@ -251,18 +251,20 @@ header {
   margin: calc(var(--line-height) * 3) 0;
 }
 header h1 {
+  font-family: 'Alegreya SC', serif;
+  font-variant: all-small-caps;
   font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   line-height: calc(2 * var(--line-height));
-  margin: calc(var(--line-height) * 1) 0;
-  text-transform: initial;
-  letter-spacing: 0;
+  margin: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
 header .subtitle {
   font-size: 1.5rem;
-  font-style: italic;
-  margin-bottom: calc(var(--line-height) * 1);
+  line-height: calc(2 * var(--line-height));
+  margin: calc(var(--line-height) * .5) 0;
 }
 header p {
   text-indent: 0;
