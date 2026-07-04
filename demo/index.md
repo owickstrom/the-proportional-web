@@ -170,37 +170,108 @@ the most critical things, such as diagrams conveying complex data.
 
 # Elements
 
-This document uses a few extra classes here and there, but mostly it's just markup.
-This, for instance, is a regular paragraph. Look at this horizontal break:
+This document uses a few extra classes here and there, but mostly it's just
+semantic <abbr>HTML5</abbr> markup. This, for instance, is a regular paragraph.
+The examples below are indented for clarity; in normal use they'd span the full
+width of the text.
 
+## Emphasis
+
+There's no surprise here; text in `<em>` tags is italicized, just as you'd
+expect:
+
+<div class="example">
+  Do you think I can stay to become <em>nothing</em> to you?
+</div>
+
+## Horizontal line breaks
+
+There's no clear guidance on horizontal line breaks in Bringhurst's book, but
+it seems to me like a good place for ornamentation. Here's one:
+
+<div class="example">
 <hr>
+</div>
 
-Lovely. We can hide stuff in the `<details`> element:
+The symbol used is U+2767 [Rotated Floral Heart Bullet]{.name} from the Unicode
+*Dingbats* block.
 
+## Details
+
+We can hide stuff in the `<details`> element. Click the label below:
+
+<div class="example">
 <details>
 <summary>A short summary of the contents</summary>
 <p>Hidden gems.</p>
 </details>
+</div>
+
+## Names
+
+Proper nouns and places names are wrapped in `<span class="name">...</span>`,
+rendered as small-caps much like in the example from the book:
+
+<div class="example">
+... on the islands of [Lombok]{.name}, [Bali]{.name}, [Flores]{.name},
+[Timor]{.name} and [Sulawesi]{.name}, the same textiles ...
+</div>
+
+## Blockquotes
+
+Bringhurst talks about various ways of typesetting quotations, and the one I
+landed on is using an indented block, italic quote text, and a footer with
+*author*, *work*, and *year*.
+
+> Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir de la faire plus courte.
+> <footer>
+>   <span class="author">Blaise Pascal</span>,
+>   <cite>Lettres Provinciales</cite>, letter XVI,
+>   <span class="year">1657</span>
+> </footer>
+
+## Figures
+
+Images with captions are put in `<figure>` and `<figcaption>` elements,
+respectively. Similar to blockquotes, *author* and *work* are styled 
+specifically using small-caps and italic text.
+
+<figure>
+    <img src="demo/vitruvian-man.jpg" width="435" />
+    <figcaption>
+        <span class="author">Leonardo Da Vinci</span>,
+        <cite>Vitruvian Man</cite>, 
+        <span>c. 1490, pen and watercolor over metalpoint on paper, 34.4 × 24.5 cm (photograph via [Wikimedia Commons](https://en.wikipedia.org/wiki/File:VitruvianMan_Leonardo_a.jpg))</span>
+    </figcaption>
+</figure>
 
 ## Lists
 
 This is a plain old bulleted list:
 
+<div class="example">
 * Banana
 * Paper boat
 * Cucumber
 * Rocket
+</div>
 
 Ordered lists look pretty much as you'd expect:
 
+<div class="example">
 1. Goals
 1. Motivations
     1. Intrinsic
     1. Extrinsic
 1. Second-order effects
+</div>
 
 ## Tables
 
+Tabular data is presented with a strong table head, using small-caps labels and
+a border:
+
+<div class="example">
 <table>
 <thead>
   <tr>
@@ -213,26 +284,27 @@ Ordered lists look pretty much as you'd expect:
   <tr>
     <td>Boboli Obelisk</td>
     <td>1.41m &times; 1.41m &times; 4.87m</td>
-    <td>43°45'50.78"N 11°15'3.34"E</td>
+    <td>43°45&prime;50.78&Prime;N 11°15&prime;3.34&Prime;E</td>
   </tr>
   <tr>
     <td>Pyramid of Khafre</td>
     <td>215.25m &times; 215.25m &times; 136.4m</td>
-    <td>29°58'34"N 31°07'51"E</td>
+    <td>29°58&prime;34&Prime;N 31°07&prime;51&Prime;E</td>
   </tr>
 </tbody>
 </table>
+</div>
 
 ## Code Blocks
 
+<div class="example">
 ```css
 :root {
   --font-family: "Alegreya", serif;
   --line-height: 1.2;
   --border-thickness: 1.5px;
   --text-color: #000;
-  --text-color-alt: #666;
   --background-color: #fff;
-  --background-color-alt: #eee;
 }
 ```
+</div>

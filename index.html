@@ -32,12 +32,11 @@ class="toc-section-number">1.2</span> Colors</a></li>
 <li><a href="#elements" id="toc-elements"><span
 class="toc-section-number">2</span> Elements</a>
 <ul class="incremental">
-<li><a href="#lists" id="toc-lists"><span
-class="toc-section-number">2.1</span> Lists</a></li>
-<li><a href="#tables" id="toc-tables"><span
-class="toc-section-number">2.2</span> Tables</a></li>
-<li><a href="#code-blocks" id="toc-code-blocks"><span
-class="toc-section-number">2.3</span> Code Blocks</a></li>
+<li><a href="#emphasis" id="toc-emphasis"><span
+class="toc-section-number">2.1</span> Emphasis</a></li>
+<li><a href="#horizontal-line-breaks"
+id="toc-horizontal-line-breaks"><span
+class="toc-section-number">2.2</span> Horizontal line breaks</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -296,11 +295,31 @@ critical things, such as diagrams conveying complex data.</p>
 <h1 data-number="2" id="elements"><span
 class="header-section-number">2</span> Elements</h1>
 <p>This document uses a few extra classes here and there, but mostly
-it’s just markup. This, for instance, is a regular paragraph. Look at
-this horizontal break:</p>
+it’s just semantic <abbr>HTML5</abbr> markup. This, for instance, is a
+regular paragraph. The examples below are indented for clarity; in
+normal use they’d span the full width of the text.</p>
+<h2 data-number="2.1" id="emphasis"><span
+class="header-section-number">2.1</span> Emphasis</h2>
+<p>There’s no surprise here; text in <code>&lt;em&gt;</code> tags is
+italicized, just as you’d expect:</p>
+<div class="example">
+<p>Do you think I can stay to become <em>nothing</em> to you?</p>
+</div>
+<h2 data-number="2.2" id="horizontal-line-breaks"><span
+class="header-section-number">2.2</span> Horizontal line breaks</h2>
+<p>There’s no clear guidance on horizontal line breaks in Bringhurst’s
+book, but it seems to me like a good place for ornamentation. Here’s
+one:</p>
+<div class="example">
 <hr>
-<p>Lovely. We can hide stuff in the <code>&lt;details</code>&gt;
-element:</p>
+</div>
+<p>The symbol used is U+2767 <span class="name">Rotated Floral Heart
+Bullet</span> from the Unicode <em>Dingbats</em> block.</p>
+<h2 data-number="2.3" id="details"><span
+class="header-section-number">2.3</span> Details</h2>
+<p>We can hide stuff in the <code>&lt;details</code>&gt; element. Click
+the label below:</p>
+<div class="example">
 <details>
 <summary>
 A short summary of the contents
@@ -309,16 +328,60 @@ A short summary of the contents
 Hidden gems.
 </p>
 </details>
-<h2 data-number="2.1" id="lists"><span
-class="header-section-number">2.1</span> Lists</h2>
+</div>
+<h2 data-number="2.4" id="names"><span
+class="header-section-number">2.4</span> Names</h2>
+<p>Proper nouns and places names are wrapped in
+<code>&lt;span class="name"&gt;...&lt;/span&gt;</code>, rendered as
+small-caps much like in the example from the book:</p>
+<div class="example">
+<p>… on the islands of <span class="name">Lombok</span>, <span
+class="name">Bali</span>, <span class="name">Flores</span>, <span
+class="name">Timor</span> and <span class="name">Sulawesi</span>, the
+same textiles …</p>
+</div>
+<h2 data-number="2.5" id="blockquotes"><span
+class="header-section-number">2.5</span> Blockquotes</h2>
+<p>Bringhurst talks about various ways of typesetting quotations, and
+the one I landed on is using an indented block, italic quote text, and a
+footer with <em>author</em>, <em>work</em>, and <em>year</em>.</p>
+<blockquote>
+Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir
+de la faire plus courte.
+<footer>
+<span class="author">Blaise Pascal</span>, <cite>Lettres
+Provinciales</cite>, letter XVI, <span class="year">1657</span>
+</footer>
+</blockquote>
+<h2 data-number="2.6" id="figures"><span
+class="header-section-number">2.6</span> Figures</h2>
+<p>Images with captions are put in <code>&lt;figure&gt;</code> and
+<code>&lt;figcaption&gt;</code> elements, respectively. Similar to
+blockquotes, <em>author</em> and <em>work</em> are styled specifically
+using small-caps and italic text.</p>
+<figure>
+<img src="demo/vitruvian-man.jpg" width="435" />
+<figcaption>
+<span class="author">Leonardo Da Vinci</span>, <cite>Vitruvian
+Man</cite>, <span>c. 1490, pen and watercolor over metalpoint on paper,
+34.4 × 24.5 cm (photograph via <a
+href="https://en.wikipedia.org/wiki/File:VitruvianMan_Leonardo_a.jpg">Wikimedia
+Commons</a>)</span>
+</figcaption>
+</figure>
+<h2 data-number="2.7" id="lists"><span
+class="header-section-number">2.7</span> Lists</h2>
 <p>This is a plain old bulleted list:</p>
+<div class="example">
 <ul class="incremental">
 <li>Banana</li>
 <li>Paper boat</li>
 <li>Cucumber</li>
 <li>Rocket</li>
 </ul>
+</div>
 <p>Ordered lists look pretty much as you’d expect:</p>
+<div class="example">
 <ol class="incremental" type="1">
 <li>Goals</li>
 <li>Motivations
@@ -328,8 +391,12 @@ class="header-section-number">2.1</span> Lists</h2>
 </ol></li>
 <li>Second-order effects</li>
 </ol>
-<h2 data-number="2.2" id="tables"><span
-class="header-section-number">2.2</span> Tables</h2>
+</div>
+<h2 data-number="2.8" id="tables"><span
+class="header-section-number">2.8</span> Tables</h2>
+<p>Tabular data is presented with a strong table head, using small-caps
+labels and a border:</p>
+<div class="example">
 <table>
 <thead>
 <tr>
@@ -353,7 +420,7 @@ Boboli Obelisk
 1.41m × 1.41m × 4.87m
 </td>
 <td>
-43°45’50.78”N 11°15’3.34”E
+43°45′50.78″N 11°15′3.34″E
 </td>
 </tr>
 <tr>
@@ -364,23 +431,25 @@ Pyramid of Khafre
 215.25m × 215.25m × 136.4m
 </td>
 <td>
-29°58’34”N 31°07’51”E
+29°58′34″N 31°07′51″E
 </td>
 </tr>
 </tbody>
 </table>
-<h2 data-number="2.3" id="code-blocks"><span
-class="header-section-number">2.3</span> Code Blocks</h2>
+</div>
+<h2 data-number="2.9" id="code-blocks"><span
+class="header-section-number">2.9</span> Code Blocks</h2>
+<div class="example">
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--font-family</span><span class="ch">:</span> <span class="st">&quot;Alegreya&quot;</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--line-height</span><span class="ch">:</span> <span class="dv">1.2</span><span class="op">;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--border-thickness</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color</span><span class="ch">:</span> <span class="cn">#000</span><span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color-alt</span><span class="ch">:</span> <span class="cn">#666</span><span class="op">;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color-alt</span><span class="ch">:</span> <span class="cn">#eee</span><span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+</div>
   <div class="debug-grid"></div>
   <script src="src/index.js"></script>
 </body>

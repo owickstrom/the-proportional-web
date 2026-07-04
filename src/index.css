@@ -10,9 +10,7 @@
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
   --text-color: #000;
-  --text-color-alt: #666;
   --background-color: #fff;
-  --background-color-alt: #eee;
 
   --font-weight-normal: 450;
   --font-weight-medium: 600;
@@ -202,11 +200,11 @@ blockquote footer > * {
 }
 blockquote .author {
   font-family: 'Alegreya SC', serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.0875em;
   height: 1rem;
   line-height: 1rem;
 }
@@ -248,7 +246,7 @@ th {
   font-size: 1.125rem;
   font-variant: all-small-caps;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.0875em;
 }
 thead tr:last-child th {
   border-bottom: var(--border-thickness) solid var(--text-color);
@@ -291,7 +289,7 @@ img, video {
 }
 img {
   font-style: italic;
-  color: var(--text-color-alt);
+  color: var(--text-color);
 }
 
 details {
@@ -348,16 +346,29 @@ code {
 }
 
 figure {
-  margin: calc(var(--line-height) * 2) 0;
+  margin: calc(var(--line-height) * 2) 3ch;
   overflow-x: auto;
   overflow-y: hidden;
 }
 
 figcaption {
   display: block;
-  font-style: italic;
   margin-top: var(--line-height);
-  text-align: center;
+}
+figcaption .author {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125rem;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.0875em;
+  height: 1rem;
+  line-height: 1rem;
+}
+figcaption cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
 }
 
 ul, ol {
@@ -402,94 +413,13 @@ li::marker {
   line-height: 0;
 }
 
-::-webkit-scrollbar {
-    height: var(--line-height);
-}
-
-input, button, textarea {
-  border: var(--border-thickness) solid var(--text-color);
-  padding: 
-    calc(var(--line-height) / 2 - var(--border-thickness))
-    calc(1ch - var(--border-thickness));
-  margin: 0;
-  font: inherit;
-  font-weight: inherit;
-  height: calc(var(--line-height) * 2);
-  width: auto;
-  overflow: visible;
-  background: var(--background-color);
-  color: var(--text-color);
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  display: inline-grid;
-  place-content: center;
-  vertical-align: top;
-  width: 2ch;
-  height: var(--line-height);
-  cursor: pointer;
-}
-input[type=checkbox]:checked:before,
-input[type=radio]:checked:before {
-  content: "";
-  width: 1ch;
-  height: calc(var(--line-height) / 2);
-  background: var(--text-color);
-}
-input[type=radio],
-input[type=radio]:before {
-  border-radius: 100%;
-}
-
-button:focus, input:focus {
-  --border-thickness: 3px;
-  outline: none;
-}
-
-input {
-  width: calc(round(down, 100%, 1ch));
-}
-::placeholder {
-  color: var(--text-color-alt);
-  opacity: 1;
-}
-::-ms-input-placeholder {
-  color: var(--text-color-alt);
-}
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0
-}
-
-button {
-  text-transform: uppercase;
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-}
-
-button:hover {
-  background: var(--background-color-alt);
-}
-button:active {
-  transform: translate(2px, 2px);
-}
-
-label {
-  display: block;
-  width: calc(round(down, 100%, 1ch));
-  height: auto;
+span.name {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125rem;
+  font-variant: all-small-caps;
+  font-weight: 450;
   line-height: var(--line-height);
-  font-weight: var(--font-weight-medium);
-  margin: 0;
-}
-
-label input {
-  width: 100%;
+  letter-spacing: 0.0875em;
 }
 
 .toc-section-number {
@@ -526,4 +456,8 @@ label input {
   vertical-align: baseline;
   line-height: calc(var(--line-height) * 2);
   padding: 0;
+}
+
+.example {
+  padding: 0 3ch;
 }
