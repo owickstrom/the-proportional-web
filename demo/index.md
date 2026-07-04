@@ -35,12 +35,14 @@ Consider this the spiritual and variable-width successor of *The Monospace
 Web*, and equally open for reuse. I'm a sucker for Pandoc, but it should work
 in many other settings with minor tweaks.
 
-# Introduction
+# Foundations
 
 > Typography is the craft of endowing human language with a durable visual form.
 > <cite>Robert Bringhurst</cite>
 
-## Type & Size
+## Typography
+
+### A single versatile font as the basis of the design
 
 In this document and its design, I'm using two variants of the *Alegreya* font.
 The regular variant is used for body text and third-level headings. Its
@@ -51,6 +53,8 @@ small-caps second-level headings, and for inline abbreviations such as
 Bringhurst argues in his book for choosing a single versatile typeface rather
 than a hodgepodge of different ones. I think Alegreya is such a choice, and
 an excellent one at that.
+
+### A sizing system built on relative measurements
 
 Every size is based on the root font size, which is 16px. Sizes are thus given
 in `rem` units, relative to the root font size. The following table shows how
@@ -119,17 +123,33 @@ all elements. Much like in *The Monospace Web* --- but not to the same extremes
 --- I've tried to get everything globally aligned to multiples of the line
 height.
 
-## Justification & Indentation
+### Justified text in modern browsers
 
-As in the book, body text is justified, not ragged-right. To some, this is
-heresy on the web. *Thou shalt not justify.* That's what we've all been taught.
-But browsers have improved over time and today it's not unthinkable to justify
-text. This stylesheet uses `word-break` and `hyphens` to control how words are
-broken and hyphenated at line breaks. The `hyphenate-limit-chars` attribute is
-useful to control the bounds of hyphenation.
+As in the book, body text is justified, not ragged right. To some, this is
+grave heresy on the web. *Thou shalt not justify.* That's what we've all been
+taught. But browsers have improved over time and today it's not unthinkable to
+justify text. This stylesheet uses `word-break` and `hyphens` to control how
+words are broken and hyphenated at line breaks. The `hyphenate-limit-chars`
+attribute is useful to control the bounds of hyphenation.
 
-Also in line with tradition, each successive paragraph has an indent
-three character-widths, as measured by the `ch` unit.
+### Indented paragraphs for legibility
+
+In keeping with tradition, each successive paragraph is indented 3ch,
+which is the width of three 0 (0x30) characters. As an example, the 
+paragraph following this one leads with an indent.
+
+This lets your eyes more easily scan the structure of the text and find the
+starts and ends of paragraphs. We've done this in print text for at least half
+a millennium, and while the web has largely settled on no indent and vertical
+space between paragraphs, it is still a valid approach.
+
+## Colors
+
+You may have noticed that this design is devoid of color. It's all black on
+white. Not only am I personally inclined towards this minimalism in prose-heavy
+designs, at least as a strong default that I depart from with careful
+consideration, but it's also what Bringhurst argues in his book, although
+with print media in mind.
 
 # Elements
 

@@ -21,15 +21,31 @@ Wickström</cite></a>. <span class="version">v0.1.0</span>, licensed under <a><a
 <h2 id="toc-title">Contents</h2>
 <ul class="incremental">
 <li><a href="#foreword" id="toc-foreword">Foreword</a></li>
-<li><a href="#introduction" id="toc-introduction"><span
-class="toc-section-number">1</span> Introduction</a>
+<li><a href="#foundations" id="toc-foundations"><span
+class="toc-section-number">1</span> Foundations</a>
 <ul class="incremental">
-<li><a href="#type-size" id="toc-type-size"><span
-class="toc-section-number">1.1</span> Type &amp; Size</a></li>
-<li><a href="#justification-indentation"
-id="toc-justification-indentation"><span
-class="toc-section-number">1.2</span> Justification &amp;
-Indentation</a></li>
+<li><a href="#typography" id="toc-typography"><span
+class="toc-section-number">1.1</span> Typography</a>
+<ul class="incremental">
+<li><a href="#a-single-versatile-font-as-the-basis-of-the-design"
+id="toc-a-single-versatile-font-as-the-basis-of-the-design"><span
+class="toc-section-number">1.1.1</span> A single versatile font as the
+basis of the design</a></li>
+<li><a href="#a-sizing-system-built-on-relative-measurements"
+id="toc-a-sizing-system-built-on-relative-measurements"><span
+class="toc-section-number">1.1.2</span> A sizing system built on
+relative measurements</a></li>
+<li><a href="#justified-text-in-modern-browsers"
+id="toc-justified-text-in-modern-browsers"><span
+class="toc-section-number">1.1.3</span> Justified text in modern
+browsers</a></li>
+<li><a href="#indented-paragraphs-for-legibility"
+id="toc-indented-paragraphs-for-legibility"><span
+class="toc-section-number">1.1.4</span> Indented paragraphs for
+legibility</a></li>
+</ul></li>
+<li><a href="#colors" id="toc-colors"><span
+class="toc-section-number">1.2</span> Colors</a></li>
 </ul></li>
 <li><a href="#elements" id="toc-elements"><span
 class="toc-section-number">2</span> Elements</a>
@@ -69,14 +85,18 @@ purple with which we are bestowed.</p>
 <p>Consider this the spiritual and variable-width successor of <em>The
 Monospace Web</em>, and equally open for reuse. I’m a sucker for Pandoc,
 but it should work in many other settings with minor tweaks.</p>
-<h1 data-number="1" id="introduction"><span
-class="header-section-number">1</span> Introduction</h1>
+<h1 data-number="1" id="foundations"><span
+class="header-section-number">1</span> Foundations</h1>
 <blockquote>
 <p>Typography is the craft of endowing human language with a durable
 visual form. <cite>Robert Bringhurst</cite></p>
 </blockquote>
-<h2 data-number="1.1" id="type-size"><span
-class="header-section-number">1.1</span> Type &amp; Size</h2>
+<h2 data-number="1.1" id="typography"><span
+class="header-section-number">1.1</span> Typography</h2>
+<h3 data-number="1.1.1"
+id="a-single-versatile-font-as-the-basis-of-the-design"><span
+class="header-section-number">1.1.1</span> A single versatile font as
+the basis of the design</h3>
 <p>In this document and its design, I’m using two variants of the
 <em>Alegreya</em> font. The regular variant is used for body text and
 third-level headings. Its small-caps variant, <em>Alegreya SC</em>, is
@@ -86,6 +106,10 @@ Finally, <em>Courier Prime</em> is used for monospace code snippets.</p>
 <p>Bringhurst argues in his book for choosing a single versatile
 typeface rather than a hodgepodge of different ones. I think Alegreya is
 such a choice, and an excellent one at that.</p>
+<h3 data-number="1.1.2"
+id="a-sizing-system-built-on-relative-measurements"><span
+class="header-section-number">1.1.2</span> A sizing system built on
+relative measurements</h3>
 <p>Every size is based on the root font size, which is 16px. Sizes are
 thus given in <code>rem</code> units, relative to the root font size.
 The following table shows how fractional, <code>rem</code>, and pixel
@@ -242,19 +266,35 @@ along with their <code>px</code> equivalents.
 alignment of all elements. Much like in <em>The Monospace Web</em> — but
 not to the same extremes — I’ve tried to get everything globally aligned
 to multiples of the line height.</p>
-<h2 data-number="1.2" id="justification-indentation"><span
-class="header-section-number">1.2</span> Justification &amp;
-Indentation</h2>
-<p>As in the book, body text is justified, not ragged-right. To some,
-this is heresy on the web. <em>Thou shalt not justify.</em> That’s what
-we’ve all been taught. But browsers have improved over time and today
-it’s not unthinkable to justify text. This stylesheet uses
+<h3 data-number="1.1.3" id="justified-text-in-modern-browsers"><span
+class="header-section-number">1.1.3</span> Justified text in modern
+browsers</h3>
+<p>As in the book, body text is justified, not ragged right. To some,
+this is grave heresy on the web. <em>Thou shalt not justify.</em> That’s
+what we’ve all been taught. But browsers have improved over time and
+today it’s not unthinkable to justify text. This stylesheet uses
 <code>word-break</code> and <code>hyphens</code> to control how words
 are broken and hyphenated at line breaks. The
 <code>hyphenate-limit-chars</code> attribute is useful to control the
 bounds of hyphenation.</p>
-<p>Also in line with tradition, each successive paragraph has an indent
-three character-widths, as measured by the <code>ch</code> unit.</p>
+<h3 data-number="1.1.4" id="indented-paragraphs-for-legibility"><span
+class="header-section-number">1.1.4</span> Indented paragraphs for
+legibility</h3>
+<p>In keeping with tradition, each successive paragraph is indented 3ch,
+which is the width of three 0 (0x30) characters. As an example, the
+paragraph following this one leads with an indent.</p>
+<p>This lets your eyes more easily scan the structure of the text and
+find the starts and ends of paragraphs. We’ve done this in print text
+for at least half a millennium, and while the web has largely settled on
+no indent and vertical space between paragraphs, it is still a valid
+approach.</p>
+<h2 data-number="1.2" id="colors"><span
+class="header-section-number">1.2</span> Colors</h2>
+<p>You may have noticed that this design is devoid of color. It’s all
+black on white. Not only am I personally inclined towards this
+minimalism in prose-heavy designs, at least as a strong default that I
+depart from with careful consideration, but it’s also what Bringhurst
+argues in his book, although with print media in mind.</p>
 <h1 data-number="2" id="elements"><span
 class="header-section-number">2</span> Elements</h1>
 <p>This document uses a few extra classes here and there, but mostly
