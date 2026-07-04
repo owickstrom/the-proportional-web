@@ -38,7 +38,11 @@ in many other settings with minor tweaks.
 # Foundations
 
 > Typography is the craft of endowing human language with a durable visual form.
-> <cite>Robert Bringhurst</cite>
+> <footer>
+>   <span class="author">Robert Bringhurst</span>,
+>   <cite>The Elements of Typographic Style</cite>, 2nd edition,
+>   <span class="year">2002</span>
+> </footer>
 
 ## Typography
 
@@ -158,9 +162,11 @@ space between paragraphs, it is still a valid approach.
 
 You may have noticed that this design is devoid of color. It's all black on
 white. Not only am I personally inclined towards this minimalism in prose-heavy
-designs, at least as a strong default that I depart from with careful
-consideration, but it's also what Bringhurst argues in his book, although
-with print media in mind.
+documents, at least as a strong default that I depart from only with careful
+consideration, but it's also what Bringhurst argues in his book, although with
+print media in mind. I find it aesthetically pleasing and easier on the eyes,
+and it reserves the arsenal of color, and thus the attention of the reader, for
+the most critical things, such as diagrams conveying complex data.
 
 # Elements
 

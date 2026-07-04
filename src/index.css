@@ -187,20 +187,36 @@ abbr {
 
 blockquote {
   padding: 0;
-  margin: var(--line-height) 2ch;
+  margin: var(--line-height) 3ch;
   font-style: italic;
 }
 blockquote p {
   text-indent: 0;
 }
-blockquote cite {
-  display: block;
+blockquote footer {
+  margin-top: var(--line-height);
   font-style: normal;
 }
-blockquote cite:before {
-  display: inline-block;
-  margin-right: .5ch;
-  content: "—";
+blockquote footer > * {
+  margin: 0;
+}
+blockquote .author {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.25rem;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.05em;
+  height: 1rem;
+  line-height: 1rem;
+}
+blockquote cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
+}
+blockquote .year {
+  display: block;
 }
 
 sub {
