@@ -48,17 +48,17 @@ in many other settings with minor tweaks.
 
 ### A single versatile font as the basis of the design
 
-<aside tabindex="0">
-While this isn't the most lightweight CSS ever imagined, I am mindful
-of the amount of bytes needing to be transmitted before you see something
-decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
-</aside>
-
 In this document and its design, I'm using two variants of the *Alegreya* font.
 The regular variant is used for body text and third-level headings. Its
 small-caps variant, *Alegreya SC*, is used for titling-caps top-level headings,
 small-caps second-level headings, and for inline abbreviations such as
 <abbr>HTML</abbr>. Finally, *Courier Prime* is used for monospace code snippets.
+
+<aside>
+While this isn't the most lightweight CSS ever imagined, I am mindful
+of the amount of bytes needing to be transmitted before you see something
+decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
+</aside>
 
 Bringhurst argues in his book for choosing a single versatile typeface rather
 than a hodgepodge of different ones. I think Alegreya is such a choice, and
@@ -215,16 +215,16 @@ We can hide stuff in the `<details`> element. Click the label below:
 
 ## Asides
 
-<aside tabindex="0">
-This is the contents of the aside element, shown in a smaller font size and in the
-right margin, with ragged-right text alignment.
-</aside>
-
 The book uses plenty of side notes. In <abbr>HTML</abbr> we define those using
 `<aside>` elements. Along with this paragraph there's a side note. With a large
 enough viewport, you'll see it in the right margin; with a smaller viewport,
-it'll be collapsed into an asterisk-like character that you can hover to expand
-it.
+it'll be collapsed into an inline paragraph with ornamentation.
+
+<aside>
+This is the contents of the aside element, shown in a smaller font size and in the
+right margin (or inline in a smaller viewport), with ragged-right text alignment.
+</aside>
+
 
 ## Names
 
