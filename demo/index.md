@@ -48,11 +48,12 @@ in many other settings with minor tweaks.
 
 ### A single versatile font as the basis of the design
 
-In this document and its design, I'm using two variants of the *Alegreya* font.
-The regular variant is used for body text and third-level headings. Its
-small-caps variant, *Alegreya SC*, is used for titling-caps top-level headings,
-small-caps second-level headings, and for inline abbreviations such as
-<abbr>HTML</abbr>. Finally, *Courier Prime* is used for monospace code snippets.
+In this document and its design, I'm using two variants of the
+[Alegreya]{.name} font. The regular variant is used for body text and
+third-level headings. Its small-caps variant, [Alegreya SC]{.name}, is used for
+titling-caps top-level headings, small-caps second-level headings, and for
+inline abbreviations such as <abbr>HTML</abbr>. Finally, [Courier Prime]{.name}
+is used for monospace code snippets.
 
 <aside>
 While this isn't the most lightweight CSS ever imagined, I am mindful
@@ -61,8 +62,8 @@ decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
 </aside>
 
 Bringhurst argues in his book for choosing a single versatile typeface rather
-than a hodgepodge of different ones. I think Alegreya is such a choice, and
-an excellent one at that.
+than a hodgepodge of different ones. I think [Alegreya]{.name} is such a
+choice, and an excellent one at that.
 
 ### A sizing system built on relative measurements
 

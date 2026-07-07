@@ -325,6 +325,7 @@ details summary::before {
   display: inline-block;
   content: '»';
   margin: 0 .5ch 0 0;
+  font-style: normal;
 }
 details[open] summary::before {
   transform: rotate(90deg);
@@ -396,6 +397,7 @@ figure {
 figcaption {
   display: block;
   margin-top: var(--line-height);
+  font-size: .875rem;
 }
 figcaption .author {
   font-family: 'Alegreya SC', serif;
