@@ -421,8 +421,9 @@ pandoc \
    -o index.html
 ```
 
-If you do need syntax highlighting, consider using a custom
-template like the one in the used for this HTML output,
+If you do need syntax highlighting, consider using a custom template like the
+[one used for this HTML
+output](https://github.com/owickstrom/the-bringhurst-web/blob/main/src/demo/template.html),
 stripping away the default CSS included by Pandoc.
 
 # Colophon {.unnumbered}

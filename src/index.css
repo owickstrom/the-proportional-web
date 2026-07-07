@@ -501,8 +501,16 @@ li::marker {
 }
 
 @media print {
+  body {
+    max-width: initial;
+  }
   body> h1, img {
     break-before: page;
+  }
+  pre {
+    overflow: visible;
+    white-space: pre-wrap;
+    word-break: break-all;
   }
 }
 
