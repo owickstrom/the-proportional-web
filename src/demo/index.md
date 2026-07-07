@@ -204,6 +204,13 @@ Usage still unsettled
 </h3>
 </figure>
 
+<aside>
+Sadly, due to how I've configured Pandoc section numbering, top level
+headings are `<h1>` elements when they should be `<h2>` elements. If you 
+produce HTML markup some other way, you might want to avoid this and modify
+the stylesheet accordingly.
+</aside>
+
 ## Emphasis
 
 There's no surprise here; text in `<em>` tags is italicized, just as you'd
