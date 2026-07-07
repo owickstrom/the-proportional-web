@@ -216,7 +216,7 @@ blockquote .author {
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
-  letter-spacing: 0.0875em;
+  letter-spacing: 0.075em;
   height: 1rem;
   line-height: 1rem;
 }
@@ -258,7 +258,7 @@ th {
   font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 500;
-  letter-spacing: 0.0875em;
+  letter-spacing: 0.075em;
 }
 thead tr:last-child th {
   border-bottom: var(--border-thickness) solid var(--text-color);
@@ -406,7 +406,6 @@ figure > *:last-child {
 figcaption {
   display: block;
   margin-top: var(--line-height);
-  font-size: .875rem;
 }
 figcaption .author {
   font-family: 'Alegreya SC', serif;
@@ -414,7 +413,7 @@ figcaption .author {
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
-  letter-spacing: 0.0875em;
+  letter-spacing: 0.075em;
   height: 1rem;
   line-height: 1rem;
 }
@@ -472,7 +471,7 @@ li::marker {
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
-  letter-spacing: 0.0875em;
+  letter-spacing: 0.075em;
 }
 
 .toc-section-number {
