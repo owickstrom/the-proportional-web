@@ -181,6 +181,29 @@ semantic <abbr>HTML5</abbr> markup. This, for instance, is a regular paragraph.
 The examples below are indented for clarity; in normal use they'd span the full
 width of the text.
 
+## Headings
+
+The design provides styles for three level of headings --- top-level chapter headings (`h1`), section headings (`h2`), and
+sub-section headings (`h3`):
+
+<figure class"example">
+
+<h1 data-number="1">
+<span class="header-section-number">1</span>
+On the theory of war
+</h1>
+
+<h2 data-number="1.2">
+<span class="header-section-number">1.2</span>
+Art or science of war
+</h2>
+
+<h3 data-number="1.2.1">
+<span class="header-section-number">1.2.1</span>
+Usage still unsettled
+</h3>
+</figure>
+
 ## Emphasis
 
 There's no surprise here; text in `<em>` tags is italicized, just as you'd

@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-body > h1, h2#toc-title {
+body h1, h2#toc-title {
   font-family: 'Alegreya SC', serif;
   font-variant: titling-caps;
   font-size: 1.25rem;

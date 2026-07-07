@@ -32,27 +32,29 @@ class="toc-section-number">1.2</span> Colors</a></li>
 <li><a href="#elements" id="toc-elements"><span
 class="toc-section-number">2</span> Elements</a>
 <ul class="incremental">
+<li><a href="#headings" id="toc-headings"><span
+class="toc-section-number">2.1</span> Headings</a></li>
 <li><a href="#emphasis" id="toc-emphasis"><span
-class="toc-section-number">2.1</span> Emphasis</a></li>
+class="toc-section-number">2.2</span> Emphasis</a></li>
 <li><a href="#horizontal-line-breaks"
 id="toc-horizontal-line-breaks"><span
-class="toc-section-number">2.2</span> Horizontal line breaks</a></li>
+class="toc-section-number">2.3</span> Horizontal line breaks</a></li>
 <li><a href="#details" id="toc-details"><span
-class="toc-section-number">2.3</span> Details</a></li>
+class="toc-section-number">2.4</span> Details</a></li>
 <li><a href="#asides" id="toc-asides"><span
-class="toc-section-number">2.4</span> Asides</a></li>
+class="toc-section-number">2.5</span> Asides</a></li>
 <li><a href="#names" id="toc-names"><span
-class="toc-section-number">2.5</span> Names</a></li>
+class="toc-section-number">2.6</span> Names</a></li>
 <li><a href="#blockquotes" id="toc-blockquotes"><span
-class="toc-section-number">2.6</span> Blockquotes</a></li>
+class="toc-section-number">2.7</span> Blockquotes</a></li>
 <li><a href="#figures" id="toc-figures"><span
-class="toc-section-number">2.7</span> Figures</a></li>
+class="toc-section-number">2.8</span> Figures</a></li>
 <li><a href="#lists" id="toc-lists"><span
-class="toc-section-number">2.8</span> Lists</a></li>
+class="toc-section-number">2.9</span> Lists</a></li>
 <li><a href="#tables" id="toc-tables"><span
-class="toc-section-number">2.9</span> Tables</a></li>
+class="toc-section-number">2.10</span> Tables</a></li>
 <li><a href="#code-blocks" id="toc-code-blocks"><span
-class="toc-section-number">2.10</span> Code Blocks</a></li>
+class="toc-section-number">2.11</span> Code Blocks</a></li>
 </ul></li>
 <li><a href="#usage" id="toc-usage"><span
 class="toc-section-number">3</span> Usage</a>
@@ -332,15 +334,37 @@ class="header-section-number">2</span> Elements</h1>
 it’s just semantic <abbr>HTML5</abbr> markup. This, for instance, is a
 regular paragraph. The examples below are indented for clarity; in
 normal use they’d span the full width of the text.</p>
-<h2 data-number="2.1" id="emphasis"><span
-class="header-section-number">2.1</span> Emphasis</h2>
+<h2 data-number="2.1" id="headings"><span
+class="header-section-number">2.1</span> Headings</h2>
+<p>The design provides styles for three level of headings — top-level
+chapter headings (<code>h1</code>), section headings (<code>h2</code>),
+and sub-section headings (<code>h3</code>):</p>
+<figure class"example">
+
+<h1 data-number="1">
+<span class="header-section-number">1</span>
+On the theory of war
+</h1>
+
+<h2 data-number="1.2">
+<span class="header-section-number">1.2</span>
+Art or science of war
+</h2>
+
+<h3 data-number="1.2.1">
+<span class="header-section-number">1.2.1</span>
+Usage still unsettled
+</h3>
+</figure>
+<h2 data-number="2.2" id="emphasis"><span
+class="header-section-number">2.2</span> Emphasis</h2>
 <p>There’s no surprise here; text in <code>&lt;em&gt;</code> tags is
 italicized, just as you’d expect:</p>
 <figure class="example">
 Do you think I can stay to become <em>nothing</em> to you?
 </figure>
-<h2 data-number="2.2" id="horizontal-line-breaks"><span
-class="header-section-number">2.2</span> Horizontal line breaks</h2>
+<h2 data-number="2.3" id="horizontal-line-breaks"><span
+class="header-section-number">2.3</span> Horizontal line breaks</h2>
 <p>There’s no clear guidance on horizontal line breaks in Bringhurst’s
 book, but it seems to me like a good place for ornamentation. Here’s
 one:</p>
@@ -349,8 +373,8 @@ one:</p>
 </figure>
 <p>The symbol used is U+2767 <span class="canonical-name">Rotated Floral
 Heart Bullet</span> from the Unicode <em>Dingbats</em> block.</p>
-<h2 data-number="2.3" id="details"><span
-class="header-section-number">2.3</span> Details</h2>
+<h2 data-number="2.4" id="details"><span
+class="header-section-number">2.4</span> Details</h2>
 <p>We can hide stuff in the <code>&lt;details</code>&gt; element. Click
 the label below:</p>
 <figure class="example">
@@ -363,8 +387,8 @@ Hidden gems.
 </p>
 </details>
 </figure>
-<h2 data-number="2.4" id="asides"><span
-class="header-section-number">2.4</span> Asides</h2>
+<h2 data-number="2.5" id="asides"><span
+class="header-section-number">2.5</span> Asides</h2>
 <p>The book uses plenty of side notes. In <abbr>HTML</abbr> we define
 those using <code>&lt;aside&gt;</code> elements. Along with this
 paragraph there’s a side note. With a large enough viewport, you’ll see
@@ -375,8 +399,8 @@ with ornamentation.</p>
 This is the contents of the aside element, shown in a smaller font size
 and with ragged-right text alignment.
 </aside>
-<h2 data-number="2.5" id="names"><span
-class="header-section-number">2.5</span> Names</h2>
+<h2 data-number="2.6" id="names"><span
+class="header-section-number">2.6</span> Names</h2>
 <p>Proper nouns and canonical names, distinguished using the
 <code>.canonical-name</code> class, are rendered as small-caps much like
 in the example from the book:</p>
@@ -387,8 +411,8 @@ class="canonical-name">Flores</span>, <span
 class="canonical-name">Timor</span> and <span
 class="canonical-name">Sulawesi</span>, the same textiles …
 </figure>
-<h2 data-number="2.6" id="blockquotes"><span
-class="header-section-number">2.6</span> Blockquotes</h2>
+<h2 data-number="2.7" id="blockquotes"><span
+class="header-section-number">2.7</span> Blockquotes</h2>
 <p>Bringhurst talks about various ways of typesetting quotations, and
 the one I landed on is using an indented block, italic quote text, and a
 footer with <em>author</em>, <em>work</em>, and <em>year</em>.</p>
@@ -400,8 +424,8 @@ de la faire plus courte.
 Provinciales</cite>, letter XVI, <span class="year">1657</span>
 </footer>
 </blockquote>
-<h2 data-number="2.7" id="figures"><span
-class="header-section-number">2.7</span> Figures</h2>
+<h2 data-number="2.8" id="figures"><span
+class="header-section-number">2.8</span> Figures</h2>
 <p>Images with captions are put in <code>&lt;figure&gt;</code> and
 <code>&lt;figcaption&gt;</code> elements, respectively. Similar to
 blockquotes, <em>author</em> and <em>work</em> are styled specifically
@@ -419,8 +443,8 @@ Commons</a>)</span>
 <p>The captions are set in a smaller size, 0.875rem, matching the side
 notes. This clarifies the distinction between primary and secondary
 content.</p>
-<h2 data-number="2.8" id="lists"><span
-class="header-section-number">2.8</span> Lists</h2>
+<h2 data-number="2.9" id="lists"><span
+class="header-section-number">2.9</span> Lists</h2>
 <p>This is a plain old bulleted list:</p>
 <figure class="example">
 <ul class="incremental">
@@ -442,8 +466,8 @@ class="header-section-number">2.8</span> Lists</h2>
 <li>Second-order effects</li>
 </ol>
 </figure>
-<h2 data-number="2.9" id="tables"><span
-class="header-section-number">2.9</span> Tables</h2>
+<h2 data-number="2.10" id="tables"><span
+class="header-section-number">2.10</span> Tables</h2>
 <p>Tabular data is presented with a strong table head, using small-caps
 labels and a border. Otherwise it’s very simple, relying only on
 spacing.</p>
@@ -488,8 +512,8 @@ Pyramid of Khafre
 </tbody>
 </table>
 </figure>
-<h2 data-number="2.10" id="code-blocks"><span
-class="header-section-number">2.10</span> Code Blocks</h2>
+<h2 data-number="2.11" id="code-blocks"><span
+class="header-section-number">2.11</span> Code Blocks</h2>
 <p>This design is geared towards prose, not code-heavy technical
 writing, but code blocks and inline code should read well nonetheless.
 The font choice of <span class="canonical-name">Courier Prime</span>
