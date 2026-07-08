@@ -18,7 +18,7 @@ index.html: src/demo/index.md Makefile
 		--template=src/demo/template.html \
  		-Vversion=v$(VERSION) -Vdate=$(DATE) \
 		-i $< \
-		-o $@
+		| html-minifier --collapse-whitespace > $@
 
 index.css: src/index.css src/reset.css
 	esbuild \

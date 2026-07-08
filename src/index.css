@@ -201,11 +201,14 @@ blockquote {
 }
 blockquote p {
   text-indent: 0;
+  white-space: normal;
 }
 blockquote p:first-of-type:before {
+  display: inline;
   content: "“";
 }
 blockquote p:last-of-type::after {
+  display: inline;
   content: "”";
 }
 blockquote footer {
@@ -295,7 +298,7 @@ header p {
 
 p {
   word-break: break-word;
-  text-wrap: balanced;
+  text-wrap: pretty;
   hyphens: auto;
   hyphenate-limit-chars: 3;
 }

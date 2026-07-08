@@ -25,6 +25,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               pandoc
+              html-minifier
               esbuild
               jq
               gnumake

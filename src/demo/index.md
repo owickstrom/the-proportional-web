@@ -12,7 +12,7 @@ Two summers ago, just before I started working at TigerBeetle, I picked up a
 new side project during downtime. I've always had a soft spot for
 <abbr>CSS</abbr> but I don't know why; frankly, it's weird, confusing, and
 infamously error-prone. It could be nostalgia from my early days of programming
-web applications. Whatever the cause, [The Monospace
+web applications. Whatever the cause, [The Mono&shy;space
 Web](https://owickstrom.github.io/the-monospace-web/){.canonical-name} was born
 out of that love, and it took off way harder than I ever thought it would, with
 many personal blogs and even application interfaces having adopted it.
@@ -27,7 +27,7 @@ the capabilities of a programmable platform. Perhaps, perhaps not. I've decided
 to publish regardless, and bid you to take from it what you will; if you find
 it pleasant or useful, that's a wonder, and if not, that's fine.
 
-Consider this the spiritual and variable-width sequel of [The Monospace
+Consider this the spiritual and variable-width sequel of [The Mono&shy;space
 Web]{.canonical-name}, and equally open for reuse. I'm a sucker for Pandoc, and
 that's what I've used to produce this HTML, but the stylesheet should work in
 many other settings with minor tweaks.
@@ -138,7 +138,7 @@ design, for instance on smaller viewports:
 ```
 
 The line height is 1.2rem, and is used as the basis for vertical alignment of
-all elements. Much like in [The Monospace Web]{.canonical-name} --- but not to
+all elements. Much like in [The Mono&shy;space Web]{.canonical-name} --- but not to
 the same extremes --- I've tried to get everything globally aligned to
 multiples of the line height.
 
@@ -197,7 +197,7 @@ width of the text.
 The design provides styles for three level of headings: top-level chapter headings (`h1`), section headings (`h2`), and
 sub-section headings (`h3`).
 
-<figure class"example">
+<figure class="example">
 
 <h1 data-number="1">
 <span class="header-section-number">1</span>
