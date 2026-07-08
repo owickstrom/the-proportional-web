@@ -294,6 +294,7 @@ header .subtitle {
 }
 header p {
   text-indent: 0;
+  text-align: left;
 }
 
 p {
