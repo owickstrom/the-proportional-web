@@ -459,3 +459,5 @@ This document was produced using
 Make](https://www.gnu.org/software/make/). The design borrows heavily, both in
 ideas and actual layout, from *The Elements of Typographic Style* by Robert
 Bringhurst.
+
+<footer>Copyright 2026 Oskar Wickström</footer>
