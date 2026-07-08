@@ -449,5 +449,5 @@ stripping away the default CSS included by Pandoc.
 # Colophon {.unnumbered}
 
 There we have it, *The Proportional Web*. I hope you enjoyed reading if you got
-this far! A big thanks to [U.S. Graphics](https://x.com/usgraphics) for
-reviewing a draft of this document.
+this far! A big thanks to [U.S. Graphics](https://x.com/usgraphics) and [Mikael
+Brockman](https://x.com/meekaale) for reviewing drafts of this document.
