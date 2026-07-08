@@ -55,7 +55,7 @@ Prime]{.canonical-name} is used for monospace code snippets.
 <aside>
 While this isn't the most lightweight CSS ever imagined, I am mindful
 of the amount of bytes needing to be transmitted before you see something
-decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
+decent. The stylesheets are around 10kB and the fonts are just shy of 170kB.
 </aside>
 
 Bringhurst argues in his book for choosing a single versatile typeface rather
@@ -422,11 +422,11 @@ your project as `the-proportional-web`, and add these to the `head` element of
 your HTML:
 
 ```html
-<link rel="stylesheet" href="the-proportional-web/index.css" />
+<link rel="stylesheet" href="the-proportional-web/index.min.css" />
 <script src="the-proportional-web/index.js"></script>
 ```
 
-If you're using Pandoc,  invoke it with some thing like the following set of
+If you're using Pandoc, invoke it with some thing like the following set of
 arguments:
 
 ```bash
@@ -434,7 +434,7 @@ pandoc \
     --toc --toc-depth=2 \
     -s \
     --number-sections --number-offset=0 \
-    --css the-proportional-web/index.css \
+    --css the-proportional-web/index.min.css \
     -V'header-includes=<script src="the-proportional-web/index.js"></script>' \
     --no-highlight \
    -i input.md \
@@ -451,3 +451,11 @@ stripping away the default CSS included by Pandoc.
 There we have it, *The Proportional Web*. I hope you enjoyed reading if you got
 this far! A big thanks to [U.S. Graphics](https://x.com/usgraphics) and [Mikael
 Brockman](https://x.com/meekaale) for reviewing drafts of this document.
+
+This document was produced using
+[Pandoc](https://hackage.haskell.org/package/pandoc-cli),
+[html-minifier](https://github.com/kangax/html-minifier),
+[esbuild](https://esbuild.github.io/), and [GNU
+Make](https://www.gnu.org/software/make/). The design borrows heavily, both in
+ideas and actual layout, from *The Elements of Typographic Style* by Robert
+Bringhurst.

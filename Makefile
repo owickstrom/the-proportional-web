@@ -6,7 +6,7 @@ all: index.html index.css
 clean:
 	rm -f index.html
 
-index.html: src/demo/index.md Makefile
+index.html: src/demo/index.md Makefile index.css index.min.css
 	pandoc \
 		--toc --toc-depth=2 \
 		-s \
@@ -21,11 +21,13 @@ index.html: src/demo/index.md Makefile
 		| html-minifier --collapse-whitespace > $@
 
 index.css: src/index.css src/reset.css
-	esbuild \
-		--banner "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" \
-		--bundle --minify \
-		$< \
-		> $@
+	echo "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" > $@
+	esbuild --bundle $< >> $@
+
+index.min.css: src/index.css src/reset.css
+	echo "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" > $@
+	esbuild --bundle --minify $< >> $@
+
 
 dev: clean all
 	@concurrently -n serve,watch \
