@@ -1,0 +1,48 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-normal);
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  line-height: var(--line-height);
+}
+
+.header-section-number {
+  font-family: 'Alegreya', serif;
+  font-size: .875rem;
+  font-weight: 500;
+  font-variant: initial;
+  letter-spacing: 0;
+  margin-right: .5ch;
+  font-style: normal;
+}
+
+body h1, h2#toc-title {
+  font-family: 'Alegreya SC', serif;
+  font-variant: titling-caps;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: var(--line-height) 0 calc(var(--line-height) - var(--border-thickness));
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+h1 .header-section-number {
+  display: none;
+}
+
+h2 {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.25rem;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.125em;
+}
+
+h3 {
+  font-style: italic;
+  margin: var(--line-height) 0;
+}
+
+h4 {
+
+}

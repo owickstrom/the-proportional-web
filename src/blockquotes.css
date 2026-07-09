@@ -1,0 +1,51 @@
+blockquote {
+  padding: 0;
+  margin: var(--line-height) 3ch;
+}
+
+blockquote p {
+  text-indent: 0;
+  white-space: normal;
+}
+
+blockquote p:first-of-type:before {
+  display: inline;
+  content: "“";
+}
+
+blockquote p:last-of-type::after {
+  display: inline;
+  content: "”";
+}
+
+blockquote footer {
+  order: 9999;
+  margin-top: var(--line-height);
+  font-style: normal;
+}
+
+blockquote footer > * {
+  margin: 0;
+}
+
+blockquote .author {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+blockquote cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+blockquote .year {
+  display: block;
+}
+

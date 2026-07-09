@@ -1,0 +1,8 @@
+.canonical-name {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+}

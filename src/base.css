@@ -1,0 +1,31 @@
+:root {
+  --font-family: "Alegreya", serif;
+  --font-family-code: "Courier Prime", monospace;
+  --line-height: 1.20rem;
+  --border-thickness: 1.5px;
+  --text-color: #000;
+  --background-color: #fff;
+  --horizontal-margin: 3ch;
+  --body-inner-width: 66ch;
+  --body-max-width: calc(var(--body-inner-width) + var(--horizontal-margin) * 2);
+
+  --font-weight-normal: 450;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "onum"; 
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* + * {
+  margin-top: var(--line-height);
+}

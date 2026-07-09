@@ -1,0 +1,165 @@
+hr {
+  position: relative;
+  display: block;
+  height: var(--line-height);
+  margin: calc(var(--line-height) * 1.5) 0;
+  border: none;
+  color: var(--text-color);
+}
+
+hr:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: calc(var(--line-height) / 2);
+  left: 0;
+  width: 100%;
+  border-top: var(--border-thickness) solid var(--text-color);
+  height: 0;
+}
+hr:after {
+  display: inline-block;
+  content: "❧";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1ch);
+  width: 2ch;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--background-color);
+}
+
+a {
+  text-decoration-thickness: var(--border-thickness);
+}
+
+a:link, a:visited {
+  color: var(--text-color);
+}
+
+p {
+  margin: var(--line-height) 0 0;
+  text-align: justify;
+  word-break: break-all;
+}
+
+p + p {
+  margin-top: 0;
+  text-indent: 3ch;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+hr + p {
+  text-indent: 0;
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+abbr {
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+sub {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  vertical-align: sub;
+  line-height: 0;
+  width: calc(1ch / 0.75);
+  font-size: .75rem;
+}
+
+p {
+  word-break: break-word;
+  text-wrap: pretty;
+  hyphens: auto;
+  hyphenate-limit-chars: 3;
+}
+
+img, video {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+img {
+  font-style: italic;
+  color: var(--text-color);
+}
+
+pre {
+  white-space: pre;
+  margin: var(--line-height) 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+pre, code {
+  font-family: var(--font-family-code);
+  font-weight: 450;
+}
+
+code {
+  font-size: .95em;
+  letter-spacing: -0.025em;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 var(--line-height);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li:before {
+  content: "•";
+  margin-right: 1ch;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+ol ul,
+ol ol,
+ul ol,
+ul ul {
+  padding: 0 0 0 2ch;
+  margin: 0;
+}
+
+ol li:before { 
+  font-size: .875rem;
+  font-weight: 500;
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li::marker {
+  line-height: 0;
+}
+

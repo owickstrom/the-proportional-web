@@ -125,7 +125,7 @@ table {
   border-spacing: 0;
 }
 
-/* src/index.css */
+/* src/base.css */
 :root {
   --font-family: "Alegreya", serif;
   --font-family-code: "Courier Prime", monospace;
@@ -153,38 +153,8 @@ table {
 * + * {
   margin-top: var(--line-height);
 }
-html {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  align-items: left;
-  background: var(--background-color);
-  color: var(--text-color);
-}
-body {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: var(--line-height) var(--horizontal-margin);
-  max-width: var(--body-max-width);
-  line-height: var(--line-height);
-  overflow-x: hidden;
-}
-@media screen and (min-width: 112ch) {
-  html {
-    align-items: center;
-  }
-}
-@media screen and (max-width: 480px) {
-  :root {
-    font-size: 14px;
-  }
-  body {
-    padding: var(--line-height) 1.5ch;
-  }
-}
+
+/* src/headings.css */
 h1,
 h2,
 h3,
@@ -232,6 +202,175 @@ h3 {
 }
 h4 {
 }
+
+/* src/tables.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: calc(var(--line-height) * -0.5) 0 calc(var(--line-height) * 1.5);
+  padding: 0;
+}
+th,
+td {
+  padding: calc(var(--line-height) / 2) .5ch;
+  line-height: var(--line-height);
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+}
+thead tr:last-child th {
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+/* src/blockquotes.css */
+blockquote {
+  padding: 0;
+  margin: var(--line-height) 3ch;
+}
+blockquote p {
+  text-indent: 0;
+  white-space: normal;
+}
+blockquote p:first-of-type:before {
+  display: inline;
+  content: "\201c";
+}
+blockquote p:last-of-type::after {
+  display: inline;
+  content: "\201d";
+}
+blockquote footer {
+  order: 9999;
+  margin-top: var(--line-height);
+  font-style: normal;
+}
+blockquote footer > * {
+  margin: 0;
+}
+blockquote .author {
+  font-family: "Alegreya SC", serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+  height: 1rem;
+  line-height: 1rem;
+}
+blockquote cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
+}
+blockquote .year {
+  display: block;
+}
+
+/* src/details.css */
+details {
+  margin: var(--line-height) 0;
+  border-top: var(--border-thickness) solid var(--text-color);
+  border-bottom: var(--border-thickness) solid var(--text-color);
+  padding: var(--line-height) 0;
+}
+summary {
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
+  cursor: pointer;
+}
+details[open] summary {
+  margin-bottom: var(--line-height);
+}
+details ::marker {
+  content: "";
+}
+details summary::before {
+  display: inline-block;
+  content: "\bb";
+  margin: 0 .5ch 0 0;
+  font-style: normal;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+details :last-child {
+  margin-bottom: 0;
+}
+
+/* src/asides.css */
+aside {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: var(--line-height);
+  margin: var(--line-height) 0;
+}
+aside:before {
+  display: inline-block;
+  content: "\2767";
+  font-size: 1rem;
+  height: .875rem;
+  margin-right: .5ch;
+  line-height: var(--line-height);
+}
+@media screen and (min-width: 95ch) {
+  aside {
+    position: absolute;
+    width: 20ch;
+    top: anchor(top);
+    left: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  aside:before {
+    display: none;
+  }
+  p + aside + p {
+    margin-top: 0;
+    text-indent: 3ch;
+  }
+}
+
+/* src/figures.css */
+figure {
+  margin: calc(var(--line-height) * 2) var(--horizontal-margin);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+figure > *:first-child {
+  margin-top: 0;
+}
+figure > *:last-child {
+  margin-bottom: 0;
+}
+figcaption {
+  display: block;
+  margin-top: var(--line-height);
+}
+figcaption .author {
+  font-family: "Alegreya SC", serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+  height: 1rem;
+  line-height: 1rem;
+}
+figcaption cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
+}
+figure pre {
+  margin: 0;
+}
+
+/* src/elements.css */
 hr {
   position: relative;
   display: block;
@@ -296,48 +435,6 @@ abbr {
   font-weight: 500;
   letter-spacing: 0.05em;
 }
-blockquote {
-  padding: 0;
-  margin: var(--line-height) 3ch;
-}
-blockquote p {
-  text-indent: 0;
-  white-space: normal;
-}
-blockquote p:first-of-type:before {
-  display: inline;
-  content: "\201c";
-}
-blockquote p:last-of-type::after {
-  display: inline;
-  content: "\201d";
-}
-blockquote footer {
-  order: 9999;
-  margin-top: var(--line-height);
-  font-style: normal;
-}
-blockquote footer > * {
-  margin: 0;
-}
-blockquote .author {
-  font-family: "Alegreya SC", serif;
-  font-size: 1.125em;
-  font-variant: all-small-caps;
-  font-weight: 450;
-  line-height: var(--line-height);
-  letter-spacing: 0.075em;
-  height: 1rem;
-  line-height: 1rem;
-}
-blockquote cite {
-  font-style: italic;
-  margin: 0;
-  line-height: var(--line-height);
-}
-blockquote .year {
-  display: block;
-}
 sub {
   position: relative;
   display: inline-block;
@@ -346,51 +443,6 @@ sub {
   line-height: 0;
   width: calc(1ch / 0.75);
   font-size: .75rem;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: calc(var(--line-height) * -0.5) 0 calc(var(--line-height) * 1.5);
-  padding: 0;
-}
-th,
-td {
-  padding: calc(var(--line-height) / 2) .5ch;
-  line-height: var(--line-height);
-  vertical-align: top;
-  text-align: left;
-}
-th {
-  font-size: 1.125em;
-  font-variant: all-small-caps;
-  font-weight: 500;
-  letter-spacing: 0.075em;
-}
-thead tr:last-child th {
-  border-bottom: var(--border-thickness) solid var(--text-color);
-}
-header {
-  margin: calc(var(--line-height) * 3) 0;
-}
-header h1 {
-  font-family: "Alegreya SC", serif;
-  font-variant: all-small-caps;
-  font-size: 2.5rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  line-height: calc(2 * var(--line-height));
-  margin: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-header .subtitle {
-  font-size: 1.25rem;
-  line-height: calc(2 * var(--line-height));
-  margin: calc(var(--line-height) * .5) 0;
-}
-header p {
-  text-indent: 0;
-  text-align: left;
 }
 p {
   word-break: break-word;
@@ -409,75 +461,12 @@ img {
   font-style: italic;
   color: var(--text-color);
 }
-details {
-  margin: var(--line-height) 0;
-  border-top: var(--border-thickness) solid var(--text-color);
-  border-bottom: var(--border-thickness) solid var(--text-color);
-  padding: var(--line-height) 0;
-}
-summary {
-  font-weight: var(--font-weight-normal);
-  font-style: italic;
-  cursor: pointer;
-}
-details[open] summary {
-  margin-bottom: var(--line-height);
-}
-details ::marker {
-  content: "";
-}
-details summary::before {
-  display: inline-block;
-  content: "\bb";
-  margin: 0 .5ch 0 0;
-  font-style: normal;
-}
-details[open] summary::before {
-  transform: rotate(90deg);
-}
-details :last-child {
-  margin-bottom: 0;
-}
-aside {
-  position: relative;
-  font-size: 0.875rem;
-  line-height: var(--line-height);
-  margin: var(--line-height) 0;
-}
-aside:before {
-  display: inline-block;
-  content: "\2767";
-  font-size: 1rem;
-  height: .875rem;
-  margin-right: .5ch;
-  line-height: var(--line-height);
-}
-@media screen and (min-width: 95ch) {
-  aside {
-    position: absolute;
-    width: 20ch;
-    top: anchor(top);
-    left: 100%;
-    margin: 0;
-    text-align: left;
-  }
-  aside:before {
-    display: none;
-  }
-  p + aside + p {
-    margin-top: 0;
-    text-indent: 3ch;
-  }
-}
 pre {
   white-space: pre;
   margin: var(--line-height) 0;
   overflow-x: auto;
   white-space: pre-wrap;
   word-break: break-all;
-}
-figure pre {
-  margin: 0;
 }
 pre,
 code {
@@ -487,36 +476,6 @@ code {
 code {
   font-size: .95em;
   letter-spacing: -0.025em;
-}
-figure {
-  margin: calc(var(--line-height) * 2) var(--horizontal-margin);
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-figure > *:first-child {
-  margin-top: 0;
-}
-figure > *:last-child {
-  margin-bottom: 0;
-}
-figcaption {
-  display: block;
-  margin-top: var(--line-height);
-}
-figcaption .author {
-  font-family: "Alegreya SC", serif;
-  font-size: 1.125em;
-  font-variant: all-small-caps;
-  font-weight: 450;
-  line-height: var(--line-height);
-  letter-spacing: 0.075em;
-  height: 1rem;
-  line-height: 1rem;
-}
-figcaption cite {
-  font-style: italic;
-  margin: 0;
-  line-height: var(--line-height);
 }
 ul,
 ol {
@@ -556,13 +515,39 @@ li {
 li::marker {
   line-height: 0;
 }
-.canonical-name {
-  font-family: "Alegreya SC", serif;
-  font-size: 1.125em;
-  font-variant: all-small-caps;
-  font-weight: 450;
+
+/* src/layout.css */
+html {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: left;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+body {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: var(--line-height) var(--horizontal-margin);
+  max-width: var(--body-max-width);
   line-height: var(--line-height);
-  letter-spacing: 0.075em;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 112ch) {
+  html {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+  body {
+    padding: var(--line-height) 1.5ch;
+  }
 }
 .toc-section-number {
   height: 1rem;
@@ -596,3 +581,40 @@ li::marker {
     break-before: page;
   }
 }
+
+/* src/header.css */
+header {
+  margin: calc(var(--line-height) * 3) 0;
+}
+header h1 {
+  font-family: "Alegreya SC", serif;
+  font-variant: all-small-caps;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: calc(2 * var(--line-height));
+  margin: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+header .subtitle {
+  font-size: 1.25rem;
+  line-height: calc(2 * var(--line-height));
+  margin: calc(var(--line-height) * .5) 0;
+}
+header p {
+  text-indent: 0;
+  text-align: left;
+}
+
+/* src/extras.css */
+.canonical-name {
+  font-family: "Alegreya SC", serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+}
+
+/* src/index.css */

@@ -1,0 +1,39 @@
+figure {
+  margin: calc(var(--line-height) * 2) var(--horizontal-margin);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+figure > *:first-child {
+  margin-top: 0;
+}
+
+figure > *:last-child {
+  margin-bottom: 0;
+}
+
+figcaption {
+  display: block;
+  margin-top: var(--line-height);
+}
+
+figcaption .author {
+  font-family: 'Alegreya SC', serif;
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 450;
+  line-height: var(--line-height);
+  letter-spacing: 0.075em;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+figcaption cite {
+  font-style: italic;
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+figure pre {
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* compensate for cell padding: */
+  margin: calc(var(--line-height) * -0.5) 0 calc(var(--line-height) * 1.5);
+  padding: 0;
+}
+
+th, td {
+  padding: calc(var(--line-height) / 2) .5ch;
+  line-height: var(--line-height);
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  font-size: 1.125em;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+}
+
+thead tr:last-child th {
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+

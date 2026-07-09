@@ -1,0 +1,32 @@
+aside {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: var(--line-height);
+  margin: var(--line-height) 0;
+}
+aside:before {
+  display: inline-block;
+  content: "❧";
+  font-size: 1rem;
+  height: .875rem;
+  margin-right: .5ch;
+  line-height: var(--line-height);
+}
+
+@media screen and (min-width: 95ch) {
+  aside {
+    position: absolute;
+    width: 20ch;
+    top: anchor(top);
+    left: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  aside:before {
+    display: none;
+  }
+  p + aside + p {
+    margin-top: 0;
+    text-indent: 3ch;
+  }
+}
