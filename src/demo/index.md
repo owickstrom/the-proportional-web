@@ -444,7 +444,31 @@ If you do need syntax highlighting, consider using a custom template like the
 output](https://github.com/owickstrom/the-proportional-web/blob/main/src/demo/template.html),
 stripping away the default CSS included by Pandoc.
 
-# Colophon {.unnumbered}
+# Related works
+
+## The Elements of Typographic Style Applied to the Web
+
+The most closely related work that I know of is [The Elements of Typographic
+Style Applied to the Web](https://webtypography.net/){.canonical-name} by
+Richard Rutter. It's a website largely mirroring the structure of Bringhurst's
+book, but adapting its advice to web design. It is much larger in scope and is
+seemingly focused on the information itself, while this document is a showcase
+of the ideas and of the stylesheet that is [The Proportional
+Web]{.canonical-name}. Furthermore, I had a hard time reading Rutter's website
+on my phone, with font sizes varying drastically. From what I've gathered, it
+dates back at least 20 years, and seems to have had no updates in about 8
+years. I have put a lot of effort into making this design responsive yet
+consistent across viewport sizes. In any case, I think it's fair to say that
+they serve different purposes and can happily coexist.
+
+## Tufte CSS
+
+[Tufte CSS](https://edwardtufte.github.io/tufte-css/){.canonical-name} 
+deserves an honorable mention. From what I've seen, it's had a big impact
+and recognition. There are small details around typesetting that I don't like
+in it, but it's overall a solid piece of work.
+
+# Afterword {.unnumbered}
 
 There we have it, *The Proportional Web*. The methodology of Bringhurst's book
 is rich and I highly recommend you read it. I've only scratched the surface in

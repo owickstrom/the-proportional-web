@@ -12,7 +12,7 @@ https://owickstrom.github.io/the-proportional-web/
 
 ```
 nix develop # or `direnv allow .`
-make
+make # or `make dev` for a live-reloading server
 ```
 
 ## License
