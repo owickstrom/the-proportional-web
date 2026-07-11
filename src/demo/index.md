@@ -461,6 +461,14 @@ years. I have put a lot of effort into making this design responsive yet
 consistent across viewport sizes. In any case, I think it's fair to say that
 they serve different purposes and can happily coexist.
 
+## Practical Typography
+
+Matthew Butterick's [Practical
+Typography](https://practicaltypography.com/){.canonical-name} is a real
+workhorse, and goes into sufficient detail on just about everything a layman or
+typography-adjacent engineer, like myself, will ever need. I have come back to
+it many times over the years.
+
 ## Tufte CSS
 
 [Tufte CSS](https://edwardtufte.github.io/tufte-css/){.canonical-name} 
@@ -480,9 +488,7 @@ This document was produced using
 [esbuild](https://esbuild.github.io/), and [GNU
 Make](https://www.gnu.org/software/make/). The design borrows heavily, both in
 ideas and actual layout, from *The Elements of Typographic Style* by Robert
-Bringhurst.
-
-A big thanks to [U.S. Graphics](https://x.com/usgraphics) and [Mikael
-Brockman](https://x.com/meekaale) for reviewing drafts of this document.
+Bringhurst. A big thanks to [U.S. Graphics](https://x.com/usgraphics) and
+[Mikael Brockman](https://x.com/meekaale) for reviewing my drafts.
 
 <footer>Copyright 2026 Oskar Wickström</footer>
